@@ -1,0 +1,43 @@
+{
+    "name": "bisectriz",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build-github": "tsc && vite build",
+        "build": "tsc && VITE_PWA_SERVER_PATH='' vite build",
+        "preview": "vite preview",
+        "test": "mocha"
+    },
+    "dependencies": {
+        "solid-js": "^1.8.17"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.7",
+        "@types/chai": "^4.3.16",
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.12.11",
+        "@typescript-eslint/eslint-plugin": "^7.8.0",
+        "@typescript-eslint/parser": "^7.8.0",
+        "autoprefixer": "^10.4.19",
+        "chai": "^5.1.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-chai-friendly": "^0.7.4",
+        "eslint-plugin-jsdoc": "^48.2.4",
+        "eslint-plugin-mocha": "^10.4.3",
+        "fast-check": "^3.18.0",
+        "mocha": "^10.4.0",
+        "postcss": "^8.4.38",
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.14",
+        "tailwindcss": "^3.4.3",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.4.5",
+        "vite": "^5.2.11",
+        "vite-plugin-pwa": "^0.20.0",
+        "vite-plugin-solid": "^2.10.2"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "jobs": 8,
+    "package": "./package.json",
+    "parallel": true,
+    "node-option": [
+        "loader=ts-node/esm"
+    ],
+    "spec": [
+        "test/**/*_test.ts"
+    ],
+    "watch-files": [
+        "test/**/*_test.ts"
+    ],
+    "trace-warnings": true
+}
