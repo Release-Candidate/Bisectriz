@@ -128,7 +128,7 @@ export type ZodiacAngle = {
  * @returns The string representation of the given `ZodiacAngle`.
  */
 export function zodiacAngleString(a: ZodiacAngle): string {
-    return `${zodiacString(a.z)} ${a.degrees}°${a.minutes}'`;
+    return `${zodiacString(a.z)} ${a.degrees}°${a.minutes}' ${zodiacSymbol(a.z)}`;
 }
 
 /**

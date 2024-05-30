@@ -47,7 +47,7 @@ export default defineConfig(({ mode }) => {
             PWA_SERVER_PATH: JSON.stringify(pwaServerPath),
         },
         server: {
-            //host: "192.168.0.100",
+            host: "192.168.0.100",
             https: {
                 key: fs.readFileSync("../https_cert-key.pem"),
                 cert: fs.readFileSync("../https_cert.pem"),

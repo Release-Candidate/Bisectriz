@@ -30,7 +30,7 @@ function App(): JSX.Element {
         <>
             <h1>Bisectriz</h1>
             <p class="text-xl">
-                <label for="zodiac1">Zvieratník:</label>
+                <label for="zodiac1"></label>
                 <select
                     name="zodiac1"
                     id="zodiac1"
@@ -48,8 +48,7 @@ function App(): JSX.Element {
                     <option value="10">vodnár</option>
                     <option value="11">ryby</option>
                 </select>
-
-                <label for="zodiac1-deg"> deg: </label>
+                <label for="zodiac1-deg"> </label>
                 <input
                     type="number"
                     name="zodiac1-deg"
@@ -59,8 +58,7 @@ function App(): JSX.Element {
                     max="29"
                     onChange={(e) => setDeg1(Number(e.target.value))}
                 />
-
-                <label for="zodiac1-min"> min: </label>
+                °<label for="zodiac1-min"> </label>
                 <input
                     type="number"
                     name="zodiac1-min"
@@ -70,9 +68,10 @@ function App(): JSX.Element {
                     max="59"
                     onChange={(e) => setMin1(Number(e.target.value))}
                 />
+                ' {z.zodiacSymbol(z1())}
             </p>
             <p class="text-xl">
-                <label for="zodiac2">Zvieratník:</label>
+                <label for="zodiac2"></label>
                 <select
                     name="zodiac2"
                     id="zodiac2"
@@ -90,8 +89,7 @@ function App(): JSX.Element {
                     <option value="10">vodnár</option>
                     <option value="11">ryby</option>
                 </select>
-
-                <label for="zodiac2-deg"> deg: </label>
+                <label for="zodiac2-deg"> </label>
                 <input
                     type="number"
                     name="zodiac2-deg"
@@ -101,8 +99,7 @@ function App(): JSX.Element {
                     max="29"
                     onChange={(e) => setDeg2(Number(e.target.value))}
                 />
-
-                <label for="zodiac2-min"> min: </label>
+                °<label for="zodiac2-min"> </label>
                 <input
                     type="number"
                     name="zodiac2-min"
@@ -112,6 +109,7 @@ function App(): JSX.Element {
                     max="59"
                     onChange={(e) => setMin2(Number(e.target.value))}
                 />
+                ' {z.zodiacSymbol(z2())}
             </p>
             <div class="card  m-4 bg-orange-200">
                 <p class="text-2xl font-bold">
