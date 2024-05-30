@@ -11,13 +11,11 @@
 /* eslint-disable function-paren-newline */
 /* eslint-disable implicit-arrow-linebreak */
 
-const versionS = { __APP_VERSION };
-
 /**
  * `version` is the name of the cache, including a timestamp.
  * This is filled by `vite` when copying `sw.js` to the directory `http`.
  */
-const version = "Bisectriz-" + versionS.__APP_VERSION;
+const version = "Bisectriz-" + __APP_VERSION;
 
 /**
  *  `manifest` is an array holding the paths to all files to cache.

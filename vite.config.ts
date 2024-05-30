@@ -32,7 +32,12 @@ export default defineConfig(({ mode }) => {
                         "assets/*.{js,css,html,ico,png,svg,xml,json}",
                     ],
                 },
+                srcDir: "public",
+                filename: "sw.js",
                 strategies: "injectManifest",
+                devOptions: {
+                    enabled: true,
+                },
             }),
         ],
         define: {
