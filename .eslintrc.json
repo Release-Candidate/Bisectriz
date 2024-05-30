@@ -230,7 +230,10 @@
         "no-script-url": "error",
         "no-self-compare": "error",
         "no-sequences": "error",
-        "no-shadow": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": [
+            "error"
+        ],
         "no-tabs": "error",
         "no-template-curly-in-string": "error",
         "no-ternary": "off",
@@ -245,6 +248,8 @@
         "no-unreachable-loop": "error",
         "no-unsafe-optional-chaining": "error",
         "no-unused-expressions": 0,
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
         "chai-friendly/no-unused-expressions": 2,
         "no-use-before-define": "off",
         "no-useless-backreference": "error",
