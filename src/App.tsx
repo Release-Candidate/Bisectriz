@@ -26,17 +26,6 @@ function App(): JSX.Element {
     const [deg2, setDeg2] = createSignal(0);
     const [min1, setMin1] = createSignal(0);
     const [min2, setMin2] = createSignal(0);
-    const angle: z.ZodiacAngle = {
-        z: z1() as z.Zodiacs,
-        degrees: 15,
-        minutes: 20,
-    };
-    const angle2: z.ZodiacAngle = {
-        z: z.Zodiacs.Cancer,
-        degrees: 8,
-        minutes: 45,
-    };
-
     return (
         <>
             <h1>Bisectriz</h1>
