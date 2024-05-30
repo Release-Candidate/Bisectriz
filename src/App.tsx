@@ -40,7 +40,7 @@ function App(): JSX.Element {
     return (
         <>
             <h1>Bisectriz</h1>
-            <p>
+            <p class="text-xl">
                 <label for="zodiac1">Zvieratník:</label>
                 <select
                     name="zodiac1"
@@ -82,7 +82,7 @@ function App(): JSX.Element {
                     onChange={(e) => setMin1(Number(e.target.value))}
                 />
             </p>
-            <p>
+            <p class="text-xl">
                 <label for="zodiac2">Zvieratník:</label>
                 <select
                     name="zodiac2"
@@ -125,7 +125,7 @@ function App(): JSX.Element {
                 />
             </p>
             <div class="card  m-4 bg-orange-200">
-                <p>
+                <p class="text-2xl font-bold">
                     Bisectriz:{" "}
                     {z.zodiacAngleString(
                         z.bisectZodiacAngle(
