@@ -203,7 +203,7 @@
                 ]
             }
         ],
-        "no-mixed-operators": "error",
+        "no-mixed-operators": "off",
         "no-multi-assign": "error",
         "no-multi-spaces": "error",
         "no-multi-str": "error",
