@@ -113,7 +113,8 @@ function App(): JSX.Element {
             </p>
             <div class="card  m-4 bg-orange-200">
                 <p class="text-2xl font-bold">
-                    Bisectriz:{" "}
+                    Bisectriz:
+                    <br />
                     {z.zodiacAngleString(
                         z.bisectZodiacAngle(
                             { z: z1(), degrees: deg1(), minutes: min1() },
