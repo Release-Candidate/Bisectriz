@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
     let pwaServerPath = env.VITE_PWA_SERVER_PATH;
     // eslint-disable-next-line no-eq-null, eqeqeq
     if (pwaServerPath == null) {
-        pwaServerPath = "/Gregor/http/";
+        pwaServerPath = "/Bisectriz/http/";
     }
     // eslint-disable-next-line no-console
     console.log(`Setting server path to ${pwaServerPath}`);
@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => {
             }),
         ],
         define: {
-            APP_VERSION: JSON.stringify(
+            __APP_VERSION: JSON.stringify(
                 process.env.npm_package_version + "-" + Date.now().toString(),
             ),
             PWA_SERVER_PATH: JSON.stringify(pwaServerPath),
@@ -55,6 +55,7 @@ export default defineConfig(({ mode }) => {
             sourcemap: true,
             outDir: "./http",
             emptyOutDir: true,
+            assetsDir: "./",
         },
     };
 });

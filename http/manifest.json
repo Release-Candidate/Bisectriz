@@ -1,15 +1,15 @@
 {
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-    "name": "Gregor",
-    "short_name": "Gregor",
-    "start_url": "/Gregor/http/",
-    "id": "./Gregor",
-    "scope": "/Gregor/http/",
+    "name": "Bisectriz",
+    "short_name": "Bisectriz",
+    "start_url": "/Bisectriz/http/",
+    "id": "./Bisectriz",
+    "scope": "/Bisectriz/http/",
     "display": "standalone",
     "theme_color": "#bfab91",
     "background_color": "#bfab91",
     "version": "0.0.0",
-    "description": "Gregor, a date and day of the week display app.",
+    "description": "Bisectriz,an angle bisecting app.",
     "icons": [
         {
             "platform": "macOS",

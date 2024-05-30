@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText:  Copyright 2023 Roland Csaszar
  * SPDX-License-Identifier: AGPL-3.0-or-later
  *
- * Project:  Gregor
+ * Project:  Bisectriz
  * File:     sw.js
  * Date:     25.Oct.2023
  *
@@ -11,11 +11,13 @@
 /* eslint-disable function-paren-newline */
 /* eslint-disable implicit-arrow-linebreak */
 
+const versionS = { __APP_VERSION };
+
 /**
  * `version` is the name of the cache, including a timestamp.
  * This is filled by `vite` when copying `sw.js` to the directory `http`.
  */
-const version = "Gregor-" + APP_VERSION;
+const version = "Bisectriz-" + versionS.__APP_VERSION;
 
 /**
  *  `manifest` is an array holding the paths to all files to cache.
