@@ -7,16 +7,16 @@
  * Date:     30.May.2024
  *
  * ==============================================================================
+ * The main app component.
  */
 
-import "./App.css";
 import * as z from "./zodiacs";
 import { Accessor, JSX, Setter, createSignal } from "solid-js";
-import { ZodiacAngleInput } from "./ZodiacAngleInput";
-import { circle } from "./assets/circle";
+import ZodiacAngleInput from "./ZodiacAngleInput";
+import ZodiacAnglesDisplay from "./ZodiacAnglesDisplay";
 
 /**
- * The app's main entry point.
+ * The app's main component.
  * @returns {JSX.Element} Main app component.
  */
 // eslint-disable-next-line max-lines-per-function
@@ -36,17 +36,14 @@ function App(): JSX.Element {
 
     return (
         <>
-            <h1>Bisectriz</h1>
-            <ZodiacAngleInput z={z1()} setZ={setZ1} id={1} />
-            <ZodiacAngleInput z={z2()} setZ={setZ2} id={2} />
-            <div class="card  m-4 bg-orange-200">
-                <p class="text-2xl font-bold">
-                    Bisectriz:
-                    <br />
-                    {z.zodiacAngleString(z.bisectZodiacAngle(z1(), z2()))}
-                </p>
-            </div>
-            {circle}
+            <section>
+                <h1>Bisectriz</h1>
+                <ZodiacAngleInput z={z1()} setZ={setZ1} id={1} />
+                <ZodiacAngleInput z={z2()} setZ={setZ2} id={2} />
+            </section>
+            <section>
+                <ZodiacAnglesDisplay z1={z1()} z2={z2()} />
+            </section>
         </>
     );
 }

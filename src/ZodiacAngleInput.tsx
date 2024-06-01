@@ -12,16 +12,27 @@
 import * as z from "./zodiacs";
 import { Component, Index, Setter } from "solid-js";
 
+/**
+ * Return the `ZodiacAngleInput` component as JSX.
+ * The input fields for the `ZodiacAngle` to are:
+ * - zodiac
+ * - degrees
+ * - minutes
+ * @param props The `ZodiacAngle`, its setter function and the id of the
+ * `ZodiacAngle` to use for HTML ids.
+ * @returns The `ZodiacAngleInput` component as JSX.
+ */
 // eslint-disable-next-line func-style
-export const ZodiacAngleInput: Component<{
+const ZodiacAngleInput: Component<{
     z: z.ZodiacAngle;
     setZ: Setter<z.ZodiacAngle>;
     id: number;
 }> = (props) => {
     // eslint-disable-next-line lines-around-comment
     /**
-     *
-     * @param e
+     * Handle the change of the zodiac.
+     * Set the zodiac in the `ZodiacAngle` of the prop.
+     * @param e The event to handle.
      */
     function handleZ(e: Event): void {
         // eslint-disable-next-line no-eq-null, eqeqeq
@@ -37,8 +48,9 @@ export const ZodiacAngleInput: Component<{
     }
 
     /**
-     *
-     * @param e
+     * Handle the change of the degrees.
+     * Set the degrees in the `ZodiacAngle` of the prop.
+     * @param e The event to handle.
      */
     function handleDeg(e: Event): void {
         // eslint-disable-next-line no-eq-null, eqeqeq
@@ -54,8 +66,9 @@ export const ZodiacAngleInput: Component<{
     }
 
     /**
-     *
-     * @param e
+     * Handle the change of the minutes.
+     * Set the minutes in the `ZodiacAngle` of the prop.
+     * @param e The event to handle.
      */
     function handleMin(e: Event): void {
         // eslint-disable-next-line no-eq-null, eqeqeq
@@ -91,7 +104,7 @@ export const ZodiacAngleInput: Component<{
                     type="number"
                     name={"zodiac" + props.id + "-deg"}
                     id={"zodiac" + props.id + "-deg"}
-                    value="0"
+                    value=""
                     min="0"
                     max="29"
                     onChange={handleDeg}
@@ -101,7 +114,7 @@ export const ZodiacAngleInput: Component<{
                     type="number"
                     name={"zodiac" + props.id + "-min"}
                     id={"zodiac" + props.id + "-min"}
-                    value="0"
+                    value=""
                     min="0"
                     max="59"
                     onChange={handleMin}
@@ -111,3 +124,5 @@ export const ZodiacAngleInput: Component<{
         </>
     );
 };
+
+export default ZodiacAngleInput;
