@@ -45,7 +45,7 @@ export function zodiacDegrees(z: Zodiacs): number {
 /**
  * The name of the 12 zodiac sign in slovak.
  */
-const zodiacSlovak = [
+export const zodiacSlovak = [
     "baran",
     "býk",
     "bliženci",

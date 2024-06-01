@@ -130,7 +130,6 @@
                 "skipBlankLines": true
             }
         ],
-        "max-lines-per-function": "error",
         "max-nested-callbacks": "error",
         "max-params": "error",
         "max-statements": "error",
@@ -176,7 +175,9 @@
             "error",
             "all",
             {
-                "enforceForArrowConditionals": false
+                "enforceForArrowConditionals": false,
+                "returnAssign": false,
+                "ignoreJSX": "multi-line"
             }
         ],
         "no-extra-parens": "off",

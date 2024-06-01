@@ -11,7 +11,8 @@
 
 import "./App.css";
 import * as z from "./zodiacs";
-import { JSX, createSignal } from "solid-js";
+import { Accessor, JSX, Setter, createSignal } from "solid-js";
+import { ZodiacAngleInput } from "./ZodiacAngleInput";
 import { circle } from "./assets/circle";
 
 /**
@@ -20,107 +21,29 @@ import { circle } from "./assets/circle";
  */
 // eslint-disable-next-line max-lines-per-function
 function App(): JSX.Element {
-    const [z1, setZ1] = createSignal(0);
-    const [z2, setZ2] = createSignal(0);
-    const [deg1, setDeg1] = createSignal(0);
-    const [deg2, setDeg2] = createSignal(0);
-    const [min1, setMin1] = createSignal(0);
-    const [min2, setMin2] = createSignal(0);
+    const [z1, setZ1]: [Accessor<z.ZodiacAngle>, Setter<z.ZodiacAngle>] =
+        createSignal({
+            z: z.Zodiacs.Aries as z.Zodiacs,
+            degrees: 0,
+            minutes: 0,
+        });
+    const [z2, setZ2]: [Accessor<z.ZodiacAngle>, Setter<z.ZodiacAngle>] =
+        createSignal({
+            z: z.Zodiacs.Aries as z.Zodiacs,
+            degrees: 0,
+            minutes: 0,
+        });
+
     return (
         <>
             <h1>Bisectriz</h1>
-            <p class="text-xl">
-                <label for="zodiac1"></label>
-                <select
-                    name="zodiac1"
-                    id="zodiac1"
-                    onChange={(e) => setZ1(Number(e.target.value))}>
-                    <option value="0">baran</option>
-                    <option value="1">býk</option>
-                    <option value="2">bliženci</option>
-                    <option value="3">rak</option>
-                    <option value="4">lev</option>
-                    <option value="5">panna</option>
-                    <option value="6">váhy</option>
-                    <option value="7">škorpion</option>
-                    <option value="8">strelec</option>
-                    <option value="9">kozorožec</option>
-                    <option value="10">vodnár</option>
-                    <option value="11">ryby</option>
-                </select>
-                <label for="zodiac1-deg"> </label>
-                <input
-                    type="number"
-                    name="zodiac1-deg"
-                    id="zodiac1-deg"
-                    value="0"
-                    min="0"
-                    max="29"
-                    onChange={(e) => setDeg1(Number(e.target.value))}
-                />
-                °<label for="zodiac1-min"> </label>
-                <input
-                    type="number"
-                    name="zodiac1-min"
-                    id="zodiac1-min"
-                    value="0"
-                    min="0"
-                    max="59"
-                    onChange={(e) => setMin1(Number(e.target.value))}
-                />
-                ' {z.zodiacSymbol(z1())}
-            </p>
-            <p class="text-xl">
-                <label for="zodiac2"></label>
-                <select
-                    name="zodiac2"
-                    id="zodiac2"
-                    onChange={(e) => setZ2(Number(e.target.value))}>
-                    <option value="0">baran</option>
-                    <option value="1">býk</option>
-                    <option value="2">bliženci</option>
-                    <option value="3">rak</option>
-                    <option value="4">lev</option>
-                    <option value="5">panna</option>
-                    <option value="6">váhy</option>
-                    <option value="7">škorpion</option>
-                    <option value="8">strelec</option>
-                    <option value="9">kozorožec</option>
-                    <option value="10">vodnár</option>
-                    <option value="11">ryby</option>
-                </select>
-                <label for="zodiac2-deg"> </label>
-                <input
-                    type="number"
-                    name="zodiac2-deg"
-                    id="zodiac2-deg"
-                    value="0"
-                    min="0"
-                    max="29"
-                    onChange={(e) => setDeg2(Number(e.target.value))}
-                />
-                °<label for="zodiac2-min"> </label>
-                <input
-                    type="number"
-                    name="zodiac2-min"
-                    id="zodiac2-min"
-                    value="0"
-                    min="0"
-                    max="59"
-                    onChange={(e) => setMin2(Number(e.target.value))}
-                />
-                ' {z.zodiacSymbol(z2())}
-            </p>
+            <ZodiacAngleInput z={z1()} setZ={setZ1} id={1} />
+            <ZodiacAngleInput z={z2()} setZ={setZ2} id={2} />
             <div class="card  m-4 bg-orange-200">
                 <p class="text-2xl font-bold">
                     Bisectriz:
                     <br />
-                    {z.zodiacAngleString(
-                        z.bisectZodiacAngle(
-                            { z: z1(), degrees: deg1(), minutes: min1() },
-                            { z: z2(), degrees: deg2(), minutes: min2() },
-                        ),
-                    )}
+                    {z.zodiacAngleString(z.bisectZodiacAngle(z1(), z2()))}
                 </p>
             </div>
             {circle}
