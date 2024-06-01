@@ -86,7 +86,11 @@ const ZodiacAngleInput: Component<{
     return (
         <>
             <p class="text-xl">
-                <label for={"zodiac" + props.id}></label>
+                <label for={"zodiac" + props.id}>
+                    <span class="sr-only">
+                        {"Zodiac sign of the angle " + props.id}
+                    </span>
+                </label>
                 <select
                     name={"zodiac" + props.id}
                     id={"zodiac" + props.id}
@@ -99,7 +103,12 @@ const ZodiacAngleInput: Component<{
                         )}
                     </Index>
                 </select>
-                <label for={"zodiac" + props.id + "-deg"}> </label>
+                <label for={"zodiac" + props.id + "-deg"}>
+                    {" "}
+                    <span class="sr-only">
+                        {"remaining angle in degrees of the angle " + props.id}
+                    </span>
+                </label>
                 <input
                     type="number"
                     name={"zodiac" + props.id + "-deg"}
@@ -109,7 +118,13 @@ const ZodiacAngleInput: Component<{
                     max="29"
                     onChange={handleDeg}
                 />
-                °<label for={"zodiac" + props.id + "-min"}> </label>
+                °
+                <label for={"zodiac" + props.id + "-min"}>
+                    {" "}
+                    <span class="sr-only">
+                        {"remaining angle in minutes of the angle" + props.id}
+                    </span>
+                </label>
                 <input
                     type="number"
                     name={"zodiac" + props.id + "-min"}
