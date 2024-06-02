@@ -6,7 +6,8 @@
  * File:     ZodiacAngleInput.tsx
  * Date:     01.Jun.2024
  *
- * ==============================================================================
+ * =============================================================================
+ * The inputs to let the user set a single `ZodiacAngle` as a component.
  */
 
 import * as z from "./zodiacs";

@@ -6,7 +6,8 @@
  * File:     ZodiacAnglesDisplay.tsx
  * Date:     01.Jun.2024
  *
- * ==============================================================================
+ * =============================================================================
+ * The component to display the result of bisecting two `ZodiacAngle`s.
  */
 
 import * as z from "./zodiacs";
