@@ -71,13 +71,13 @@ const Circle: Component<{
                 transform={"rotate(-" + ((props.z1 + 90) % 360) + ", 251, 251)"}
                 class="fill-none stroke-blue-500"
                 id="angle1">
-                <line x1="251" y1="0" x2="251" y2="251" />
+                <line x1="251" y1="30" x2="251" y2="251" />
             </g>
             <g
                 transform={"rotate(-" + ((props.z2 + 90) % 360) + ", 251, 251)"}
                 class="fill-none stroke-green-500"
                 id="angle2">
-                <line x1="251" y1="0" x2="251" y2="251" />
+                <line x1="251" y1="30" x2="251" y2="251" />
             </g>
             <g
                 transform={
@@ -85,7 +85,7 @@ const Circle: Component<{
                 }
                 class="fill-none stroke-DarkRed"
                 id="bisect_angle">
-                <line x1="251" y1="0" x2="251" y2="251" />
+                <line x1="251" y1="30" x2="251" y2="251" />
             </g>
         </g>
     </svg>
