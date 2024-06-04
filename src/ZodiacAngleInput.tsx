@@ -88,7 +88,9 @@ const ZodiacAngleInput: Component<{
         <>
             <form
                 class={
-                    (props.id === 1 ? "border-blue-500" : "border-green-500") +
+                    (props.id === 1
+                        ? "border-emerald-200"
+                        : "border-emerald-200") +
                     " m-2 rounded-md border-2 border-solid bg-white text-xl shadow-md"
                 }
                 action=""

@@ -31,7 +31,7 @@ export const enum Zodiacs {
  * Constant to multiply the zodiac index with to get the angle in degrees.
  * Starting with Aries at 0°.
  */
-const zodiacDegreeFactor = 30;
+export const zodiacDegreeFactor = 30;
 
 /**
  * Return the angle in degrees of the given zodiac, starting with aries at 0.

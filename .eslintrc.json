@@ -172,11 +172,12 @@
         "no-extra-bind": "error",
         "no-extra-label": "error",
         "@typescript-eslint/no-extra-parens": [
-            "error",
+            "off",
             "all",
             {
                 "enforceForArrowConditionals": false,
                 "returnAssign": false,
+                "": false,
                 "ignoreJSX": "multi-line"
             }
         ],
@@ -200,7 +201,10 @@
                 "ignore": [
                     0,
                     1,
-                    -1
+                    2,
+                    -1,
+                    180,
+                    360
                 ]
             }
         ],
