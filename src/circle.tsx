@@ -7,6 +7,8 @@
  * Date:     04.Jun.2024
  *
  * =============================================================================
+ * The component to display the result of bisecting two `ZodiacAngle`s in a
+ * drawing.
  */
 
 import * as z from "./zodiacs";
@@ -17,15 +19,50 @@ import { Component, For, Match, Switch } from "solid-js";
  */
 type Point = { x: number; y: number };
 
+/**
+ * The radius of the outermost circle.
+ */
 const circleRadius = 250;
+
+/**
+ * The radius of the inner circle of the outer ring containing the zodiac signs.
+ */
 const circleRadiusInner = 220;
+
+/**
+ * The width of the ring containing the zodiac signs.
+ */
 const ringWidth = circleRadius - circleRadiusInner;
-const lineDegree = 5;
-const numLines = 360 / lineDegree;
-const lineLength = 10;
-const lineLength10 = 15;
+
+/**
+ * The center of the circle.
+ */
 const circleCenter: Point = { x: circleRadius + 1, y: circleRadius + 1 };
+
+/**
+ * The size of the SVG's view port.
+ */
 const viewPortSize = 2 * circleRadius + 2;
+
+/**
+ * The angle between two detail scale lines in degrees.
+ */
+const lineDegree = 5;
+
+/**
+ * The number of detail scale lines.
+ */
+const numLines = 360 / lineDegree;
+
+/**
+ * The length of the short detail scale lines.
+ */
+const lineLength = 10;
+
+/**
+ * The length of the long detail scale lines, which are shown every 10 degrees.
+ */
+const lineLength10 = 15;
 
 /**
  * The offset in degrees of the first zodiac sign - aries. Counterclockwise from
@@ -67,6 +104,13 @@ function rotateAroundCenter(p: Point, center: Point, angle: number): Point {
     };
 }
 
+/**
+ * Return the `Circle` component, which is a drawing of a circle of zodiacs, the
+ * two given angels and the bisection of the two angles, as JSX.
+ * @param props The props holding the two angles and the bisection of the two in
+ *              degrees.
+ * @returns The `Circle` component as JSX.
+ */
 // eslint-disable-next-line func-style
 const Circle: Component<{
     z1: number;
