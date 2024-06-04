@@ -37,7 +37,6 @@ function App(): JSX.Element {
     return (
         <>
             <section>
-                <h1>Bisectriz</h1>
                 <ZodiacAngleInput z={z1()} setZ={setZ1} id={1} />
                 <ZodiacAngleInput z={z2()} setZ={setZ2} id={2} />
             </section>

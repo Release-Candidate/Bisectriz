@@ -86,7 +86,13 @@ const ZodiacAngleInput: Component<{
 
     return (
         <>
-            <p class="text-xl">
+            <form
+                class={
+                    (props.id === 1 ? "border-blue-500" : "border-green-500") +
+                    " m-2 rounded-md border-2 border-solid bg-white text-xl shadow-md"
+                }
+                action=""
+                name={"Zodiac_angle_input" + props.id}>
                 <label for={"zodiac" + props.id}>
                     <span class="sr-only">
                         {"Zodiac sign of the angle " + props.id}
@@ -95,6 +101,7 @@ const ZodiacAngleInput: Component<{
                 <select
                     name={"zodiac" + props.id}
                     id={"zodiac" + props.id}
+                    class="bg-white"
                     onChange={handleZ}>
                     <Index each={z.zodiacSlovak}>
                         {(zodiac, i) => (
@@ -114,7 +121,9 @@ const ZodiacAngleInput: Component<{
                     type="number"
                     name={"zodiac" + props.id + "-deg"}
                     id={"zodiac" + props.id + "-deg"}
-                    value=""
+                    class="bg-white"
+                    placeholder="0"
+                    required
                     min="0"
                     max="29"
                     onChange={handleDeg}
@@ -130,13 +139,15 @@ const ZodiacAngleInput: Component<{
                     type="number"
                     name={"zodiac" + props.id + "-min"}
                     id={"zodiac" + props.id + "-min"}
-                    value=""
+                    class="bg-white"
+                    placeholder="0"
+                    required
                     min="0"
                     max="59"
                     onChange={handleMin}
                 />
                 ' {z.zodiacSymbol(props.z.z)}
-            </p>
+            </form>
         </>
     );
 };

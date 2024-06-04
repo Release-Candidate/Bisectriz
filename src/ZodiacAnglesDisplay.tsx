@@ -11,8 +11,8 @@
  */
 
 import * as z from "./zodiacs";
+import Circle from "./assets/circle";
 import { Component } from "solid-js";
-import { circle } from "./assets/circle";
 
 /**
  * Return the `ZodiacAnglesDisplay` component as JSX.
@@ -28,14 +28,19 @@ const ZodiacAnglesDisplay: Component<{
     z2: z.ZodiacAngle;
 }> = (props) => (
     <>
-        <div class="m-4 bg-orange-200 p-8">
-            <p class="text-2xl font-bold">
-                Bisectriz:
-                <br />
-                {z.zodiacAngleString(z.bisectZodiacAngle(props.z1, props.z2))}
-            </p>
+        <p
+            class="m-2 rounded-md border-2 border-solid border-DarkRed bg-gray-100 p-2 text-2xl font-bold"
+            id="result_bisect">
+            Bisectriz:
+            {" " + z.zodiacAngleString(z.bisectZodiacAngle(props.z1, props.z2))}
+        </p>
+        <div id="result_circle">
+            <Circle
+                z1={z.zodiacAngle2Deg(props.z1)}
+                z2={z.zodiacAngle2Deg(props.z2)}
+                res={z.zodiacAngle2Deg(z.bisectZodiacAngle(props.z1, props.z2))}
+            />
         </div>
-        <div id="circle">{circle}</div>
     </>
 );
 
