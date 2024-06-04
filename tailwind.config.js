@@ -3,6 +3,9 @@ export default {
     content: ["./src/**/*.{ts,tsx}", "./index.html"],
     theme: {
         extend: {
+            fontFamily: {
+                zodiac: ["FreeMono"],
+            },
             colors: {
                 DarkBrown: {
                     light: "#bfab91",

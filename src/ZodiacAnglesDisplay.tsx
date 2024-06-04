@@ -11,7 +11,7 @@
  */
 
 import * as z from "./zodiacs";
-import Circle from "./assets/circle";
+import Circle from "./circle";
 import { Component } from "solid-js";
 
 /**

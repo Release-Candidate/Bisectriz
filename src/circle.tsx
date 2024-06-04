@@ -9,8 +9,8 @@
  * =============================================================================
  */
 
-import * as z from "../zodiacs";
-import { Component, For } from "solid-js";
+import * as z from "./zodiacs";
+import { Component, For, Match, Switch } from "solid-js";
 
 /**
  * The `Point` type, a 2D vector with x and y coordinates.
@@ -20,6 +20,10 @@ type Point = { x: number; y: number };
 const circleRadius = 250;
 const circleRadiusInner = 220;
 const ringWidth = circleRadius - circleRadiusInner;
+const lineDegree = 5;
+const numLines = 360 / lineDegree;
+const lineLength = 10;
+const lineLength10 = 15;
 const circleCenter: Point = { x: circleRadius + 1, y: circleRadius + 1 };
 const viewPortSize = 2 * circleRadius + 2;
 
@@ -70,7 +74,7 @@ const Circle: Component<{
     res: number;
 }> = (props) => (
     <svg viewBox={0 + " " + 0 + " " + viewPortSize + " " + viewPortSize}>
-        <g class="fill-none stroke-DarkBrown stroke-2" id="circles_with_signs">
+        <g class="fill-none stroke-black stroke-2" id="circles_with_signs">
             <circle
                 cx={circleCenter.x}
                 cy={circleCenter.y}
@@ -83,6 +87,7 @@ const Circle: Component<{
                 r={circleRadiusInner}
                 id="inner2"
             />
+
             <For each={Array.from({ length: 12 })}>
                 {(_, i) => (
                     <>
@@ -106,6 +111,7 @@ const Circle: Component<{
                         <text
                             text-anchor="middle"
                             dominant-baseline="central"
+                            class="font-zodiac text-2xl"
                             {...(rotateAroundCenter(
                                 signStartPoint,
                                 circleCenter,
@@ -113,6 +119,42 @@ const Circle: Component<{
                             ) as Object)}>
                             {z.zodiacSymbol(i())}
                         </text>
+                    </>
+                )}
+            </For>
+            <For each={Array.from({ length: numLines })}>
+                {(_, i) => (
+                    <>
+                        <g
+                            transform={
+                                "rotate(" +
+                                i() * lineDegree +
+                                "," +
+                                circleCenter.x +
+                                "," +
+                                circleCenter.y +
+                                ")"
+                            }>
+                            <Switch>
+                                <Match when={(i() * lineDegree) % 10 === 0}>
+                                    <line
+                                        x1={circleCenter.x}
+                                        y1={ringWidth}
+                                        x2={circleCenter.x}
+                                        y2={ringWidth + lineLength10}
+                                    />
+                                </Match>
+                                <Match when={(i() * lineDegree) % 10 !== 0}>
+                                    <line
+                                        x1={circleCenter.x}
+                                        y1={ringWidth}
+                                        x2={circleCenter.x}
+                                        y2={ringWidth + lineLength}
+                                        stroke-width={1}
+                                    />
+                                </Match>
+                            </Switch>
+                        </g>
                     </>
                 )}
             </For>
@@ -176,6 +218,13 @@ const Circle: Component<{
                 />
             </g>
         </g>
+        <circle
+            cx={circleCenter.x}
+            cy={circleCenter.y}
+            r={5}
+            class="fill-white stroke-DarkBrown stroke-2"
+            id="centerPoint"
+        />
     </svg>
 );
 
