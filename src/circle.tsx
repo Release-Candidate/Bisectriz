@@ -222,7 +222,7 @@ const Circle: Component<{
             cx={circleCenter.x}
             cy={circleCenter.y}
             r={5}
-            class="fill-white stroke-DarkBrown stroke-2"
+            class="fill-white stroke-black stroke-2"
             id="centerPoint"
         />
     </svg>
