@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                zodiac: ["FreeMono"],
+                zodiac: ["DejaVuSans"],
             },
             colors: {
                 DarkBrown: {

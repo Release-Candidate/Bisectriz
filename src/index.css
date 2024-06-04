@@ -4,10 +4,10 @@
 
 @layer base {
     @font-face {
-        font-family: "FreeMono";
+        font-family: "DejaVuSans";
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url("./FreeMonospaced-GNU.ttf");
+        src: url("/DejaVuSans.ttf");
     }
 }

@@ -103,7 +103,7 @@ const ZodiacAngleInput: Component<{
                 <select
                     name={"zodiac" + props.id}
                     id={"zodiac" + props.id}
-                    class="bg-white"
+                    class="font-zodiac bg-white"
                     onChange={handleZ}>
                     <Index each={z.zodiacSlovak}>
                         {(zodiac, i) => (
@@ -148,7 +148,7 @@ const ZodiacAngleInput: Component<{
                     max="59"
                     onChange={handleMin}
                 />
-                ' {z.zodiacSymbol(props.z.z)}
+                '
             </form>
         </>
     );
