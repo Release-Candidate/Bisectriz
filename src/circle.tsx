@@ -25,14 +25,14 @@ type Point = { x: number; y: number };
 const circleRadius = 250;
 
 /**
- * The radius of the inner circle of the outer ring containing the zodiac signs.
- */
-const circleRadiusInner = 220;
-
-/**
  * The width of the ring containing the zodiac signs.
  */
-const ringWidth = circleRadius - circleRadiusInner;
+const ringWidth = 40;
+
+/**
+ * The radius of the inner circle of the outer ring containing the zodiac signs.
+ */
+const circleRadiusInner = circleRadius - ringWidth;
 
 /**
  * The center of the circle.

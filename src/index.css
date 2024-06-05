@@ -10,4 +10,25 @@
         font-display: swap;
         src: url("/DejaVuSans.ttf");
     }
+    @font-face {
+        font-family: "DejaVuSans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/DejaVuSans-Bold.ttf");
+    }
+    @font-face {
+        font-family: "DejaVuSans";
+        font-style: oblique;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/DejaVuSans-Oblique.ttf");
+    }
+    @font-face {
+        font-family: "DejaVuSans";
+        font-style: oblique;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/DejaVuSans-BoldOblique.ttf");
+    }
 }
