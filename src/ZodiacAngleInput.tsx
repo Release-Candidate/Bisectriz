@@ -91,7 +91,7 @@ const ZodiacAngleInput: Component<{
                     (props.id === 1
                         ? "border-emerald-200"
                         : "border-emerald-200") +
-                    " m-2 rounded-md border-2 border-solid bg-white text-xl shadow-md"
+                    "m-2 rounded-md border-2 border-solid bg-white text-2xl shadow-md"
                 }
                 action=""
                 name={"Zodiac_angle_input" + props.id}>
@@ -103,7 +103,7 @@ const ZodiacAngleInput: Component<{
                 <select
                     name={"zodiac" + props.id}
                     id={"zodiac" + props.id}
-                    class="font-zodiac bg-white"
+                    class="bg-white font-zodiac"
                     onChange={handleZ}>
                     <Index each={z.zodiacSlovak}>
                         {(zodiac, i) => (
