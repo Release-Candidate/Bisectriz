@@ -29,11 +29,12 @@ const ZodiacAnglesDisplay: Component<{
 }> = (props) => (
     <>
         <p
-            class="my-2 rounded-md border-2 border-solid border-red-700 bg-gray-100 p-2 font-zodiac text-2xl"
+            class="my-2 flex flex-wrap justify-center rounded-md border-2 border-solid border-red-700 bg-gray-100 font-zodiac text-2xl"
             id="result_bisect">
-            Bisectriz:
-            <br />
-            {z.zodiacAngleString(z.bisectZodiacAngle(props.z1, props.z2))}
+            <span class="px-1">Bisectriz:</span>
+            <span class="px-1">
+                {z.zodiacAngleString(z.bisectZodiacAngle(props.z1, props.z2))}
+            </span>
         </p>
         <div id="result_circle">
             <Circle
