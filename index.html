@@ -33,6 +33,7 @@
                     .register(new URL("./sw.js", import.meta.url), {
                         type: "module",
                         scope: PWA_SERVER_PATH,
+                        updateViaCache: "all",
                     })
                     .then(function () {
                         console.log("[index.html] Service Worker Registered");

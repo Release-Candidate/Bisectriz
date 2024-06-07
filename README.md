@@ -18,7 +18,7 @@ Bisectriz is a PWA template for VIte, TailwindCSS and Solid.js. This being a PWA
 
 ## Link to the Created PWA
 
-[Bisectriz at GitHub Pages](https://release-candidate.github.io/Bisectriz/http/index.html)
+[Bisectriz at GitHub Pages](https://release-candidate.github.io/Bisectriz/http/)
 
 ## Usage
 
