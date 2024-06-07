@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
                     injectionPoint: "VITE_PLUGIN_MANIFEST",
                     additionalManifestEntries: ["sw.js", "/"],
                     globPatterns: [
-                        "**/*.{js,css,html,ico,png,svg,xml,json}",
+                        "**/*.{js,css,html,ico,png,svg,xml,json,ttf}",
                         "icons/*.{png,svg}",
                         "assets/*.{js,css,html,ico,png,svg,xml,json}",
                     ],
