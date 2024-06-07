@@ -29,7 +29,7 @@ const ZodiacAnglesDisplay: Component<{
 }> = (props) => (
     <>
         <p
-            class="my-2 flex flex-wrap justify-center rounded-md border-2 border-solid border-red-700 bg-gray-100 font-zodiac text-2xl"
+            class="my-2 flex flex-wrap justify-center rounded-md border-2 border-solid border-red-700 bg-gray-100 py-2 font-zodiac text-2xl"
             id="result_bisect">
             <span class="px-1">Bisectriz:</span>
             <span class="px-1">

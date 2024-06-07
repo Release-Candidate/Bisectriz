@@ -91,7 +91,7 @@ const ZodiacAngleInput: Component<{
                     (props.id === 1
                         ? "border-emerald-200"
                         : "border-emerald-200") +
-                    " my-2 rounded-md border-2 border-solid bg-white text-2xl shadow-md"
+                    " my-2 rounded-md border-2 border-solid bg-white py-2 text-2xl shadow-md"
                 }
                 action=""
                 name={"Zodiac_angle_input" + props.id}>
