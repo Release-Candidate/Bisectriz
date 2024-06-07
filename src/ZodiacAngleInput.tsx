@@ -86,6 +86,7 @@ const ZodiacAngleInput: Component<{
 
     return (
         <>
+            {" "}
             <form
                 class={
                     (props.id === 1
@@ -104,7 +105,8 @@ const ZodiacAngleInput: Component<{
                     name={"zodiac" + props.id}
                     id={"zodiac" + props.id}
                     class="bg-white font-zodiac"
-                    onChange={handleZ}>
+                    onChange={handleZ}
+                    value={props.z.z}>
                     <Index each={z.zodiacSlovak}>
                         {(zodiac, i) => (
                             <option value={i}>
@@ -125,6 +127,7 @@ const ZodiacAngleInput: Component<{
                     id={"zodiac" + props.id + "-deg"}
                     class="bg-white"
                     placeholder="0"
+                    value={props.z.degrees !== 0 ? props.z.degrees : ""}
                     required
                     min="0"
                     max="29"
@@ -143,6 +146,7 @@ const ZodiacAngleInput: Component<{
                     id={"zodiac" + props.id + "-min"}
                     class="bg-white"
                     placeholder="0"
+                    value={props.z.minutes !== 0 ? props.z.minutes : ""}
                     required
                     min="0"
                     max="59"

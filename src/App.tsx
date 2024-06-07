@@ -34,9 +34,36 @@ function App(): JSX.Element {
             minutes: 0,
         });
 
+    /**
+     * Handle the reset.
+     * Resets both `ZodiacAngle`s to their initial values: `Aries`, 0, 0.
+     * @param e The event to handle.
+     */
+    function handleReset(e: Event): void {
+        // eslint-disable-next-line no-eq-null, eqeqeq
+        if (e.currentTarget == null) {
+            return;
+        }
+        setZ1({
+            z: z.Zodiacs.Aries as z.Zodiacs,
+            degrees: 0,
+            minutes: 0,
+        });
+        setZ2({
+            z: z.Zodiacs.Aries as z.Zodiacs,
+            degrees: 0,
+            minutes: 0,
+        });
+    }
+
     return (
         <>
             <section>
+                <button
+                    onClick={handleReset}
+                    class="rounded-md border-2 border-solid  bg-red-300 px-4 py-2  text-2xl shadow-md hover:bg-red-400 active:bg-red-500 active:text-white active:shadow-none">
+                    Reset
+                </button>
                 <ZodiacAngleInput z={z1()} setZ={setZ1} id={1} />
                 <ZodiacAngleInput z={z2()} setZ={setZ2} id={2} />
             </section>
