@@ -56,10 +56,10 @@ export default defineConfig(({ mode }) => {
         preview: {
             port: 4173,
             host: "localhost",
-            https: {
-                key: fs.readFileSync("../localhost_https_cert-key.pem"),
-                cert: fs.readFileSync("../localhost_https_cert.pem"),
-            },
+            // https: {
+            //     key: fs.readFileSync("../localhost_https_cert-key.pem"),
+            //     cert: fs.readFileSync("../localhost_https_cert.pem"),
+            // },
         },
         base: "./",
         build: {
