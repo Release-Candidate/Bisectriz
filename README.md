@@ -2,6 +2,9 @@
 
 ![Bisectriz logo](./public/icons/icon-192.png)
 
+A progressive web app to display the angle bisector of two angles given by zodiac sign, degrees and minutes.
+The angle bisector of the two given angles is always calculated counterclockwise from the smaller to the bigger angle, the order in the input fields does not matter. The two angles are given as zodiac sign -- starting at aries (0°), ending at pisces (330°) -- the rest given in degrees between 0° and 29° (inclusive) and minutes between 0' and 59' (inclusive).
+
 - [Link to the Created PWA](#link-to-the-created-pwa)
 - [Usage](#usage)
   - [Available Scripts](#available-scripts)
