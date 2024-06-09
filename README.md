@@ -12,7 +12,7 @@ The angle bisector of the two given angles is always calculated counterclockwise
 
 ## Link to the Created PWA
 
-[Bisectriz at GitHub Pages](https://release-candidate.github.io/Bisectriz/http/)
+[Bisectriz at GitHub Pages](https://release-candidate.github.io/Bisectriz/)
 
 ## Usage
 

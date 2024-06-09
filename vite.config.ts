@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode, isPreview }) => {
     let pwaServerPath = env.VITE_PWA_SERVER_PATH;
     // eslint-disable-next-line no-eq-null, eqeqeq
     if (pwaServerPath == null) {
-        pwaServerPath = "/Bisectriz/http/";
+        pwaServerPath = "/Bisectriz/";
     }
     // eslint-disable-next-line no-console
     console.log(`Setting server path to ${pwaServerPath}`);
