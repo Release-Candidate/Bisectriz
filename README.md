@@ -13,6 +13,8 @@
 
 ## Usage
 
+Install all development dependencies using `npm`:
+
 ```bash
 % npm install --save-dev
 ```
@@ -21,7 +23,7 @@
 
 In the project directory, you can run:
 
-- `npm run dev` - Runs the app in the development mode. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+- `npm run dev` - Runs the app in the development mode. Open [https://localhost:5173](https://localhost:5173) to view it in the browser. Only works with certificate files `../https_cert-key.pem` and `../https_cert.pem`. See [./vite.config.ts](./vite.config.ts):
 - `npm run build` - Builds the app for production to the `./http` folder. To be used with a local `npm run preview`.
 - `npm run build-github` - Builds the app for production and hosting at GitHub pages to the `./http` folder.
 - `npm run preview` - Run the app in production mode. Open [https://localhost:4173](https://localhost:4173) to view it in the browser. Only works with certificate files `../https_cert-key.pem` and `../https_cert.pem`. See [./vite.config.ts](./vite.config.ts):
@@ -29,8 +31,8 @@ In the project directory, you can run:
   ```javascript
   server: {
             https: {
-                key: fs.readFileSync("../https_cert-key.pem"),
-                cert: fs.readFileSync("../https_cert.pem"),
+                key: fs.readFileSync("../localhost_https_cert-key.pem"),
+                cert: fs.readFileSync("../localhost_https_cert.pem"),
             },
         },
   ```
