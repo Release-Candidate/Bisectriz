@@ -1,5 +1,7 @@
 # Bisectriz PWA
 
+[![Deploy PWA to Pages](https://github.com/Release-Candidate/Bisectriz/actions/workflows/pages.yaml/badge.svg)](https://github.com/Release-Candidate/Bisectriz/actions/workflows/pages.yaml)
+
 ![Bisectriz logo](./public/icons/icon-192.png)
 
 A progressive web app to display the angle bisector of two angles given by zodiac sign, degrees and minutes.
