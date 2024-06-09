@@ -131,6 +131,7 @@ const ZodiacAngleInput: Component<{
                     required
                     min="0"
                     max="29"
+                    size={2}
                     onChange={handleDeg}
                 />
                 °
@@ -150,6 +151,7 @@ const ZodiacAngleInput: Component<{
                     required
                     min="0"
                     max="59"
+                    size={2}
                     onChange={handleMin}
                 />
                 '
