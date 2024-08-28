@@ -1,5 +1,8 @@
 # Bisectriz PWA
 
+> [!WARNING]
+> This repository has moved to [Codeberg: Bisectriz](https://codeberg.org/Release-Candidate/Bisectriz). The PWA is now located at [release-candidate.codeberg.page/Bisectriz/](https://release-candidate.codeberg.page/Bisectriz/).
+
 [![Deploy PWA to Pages](https://github.com/Release-Candidate/Bisectriz/actions/workflows/pages.yaml/badge.svg)](https://github.com/Release-Candidate/Bisectriz/actions/workflows/pages.yaml)
 
 ![Bisectriz logo](./public/icons/icon-192.png)
